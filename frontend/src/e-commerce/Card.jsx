@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { BsCart2 } from "react-icons/bs";
-import { decrement, increment } from "../features/counter/counterSlice";
+import {Link} from 'react-router-dom'
 
-export const Card = ({ item, carti }) => {
-  const dispatch = useDispatch();
-  // const msg = useSelector((state) => state.counter.value);
+export const Card = ({ item, carti ,GetProductsById }) => {
 
-  // const[msg,setMsg]=useState(0)
-  const[qty , setQty]=useState(0)
 
   return (
     <>
@@ -32,19 +27,13 @@ export const Card = ({ item, carti }) => {
           </div>
           <div className="rating">
             <h4> 4.5 ★</h4>
-            <p>23394 ratings</p>{" "}
+            <p><Link to='/detail' onClick={()=>{GetProductsById (item._id)}}>View detail</Link></p>
+            {/* <p>23394 ratings</p>{" "} */}
           </div>
         
         </div>
 
-        {/* <div className="card">
-<div className="img-div"><img src="" alt="" /></div>
-<h3>hello</h3>
-<h2>₹ 5000</h2>
-<div className="delivery"> free delivery</div>
-<div className="rating"><h4> 4.5 ★
- </h4><p>23394 ratings</p></div>
-</div> */}
+    
       </div>
     </>
   );

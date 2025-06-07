@@ -10,7 +10,7 @@ function togfun(){
   return (
     <>
     <div className="toggle">
-<div className="togglea"><h1>{item.q}</h1> <button id='tog-btn' onClick={togfun}> {to ? "-" :"+"}</button></div>
+<div className="togglea"><h2>{item.q}</h2> <button id='tog-btn' onClick={togfun}> {to ? "-" :"+"}</button></div>
 <div className="toggleb">{to && <p>{item.a}</p>}</div>
 
     </div>
