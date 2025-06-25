@@ -30,7 +30,7 @@
 //   )
 // }
 import React, { useState } from 'react';
-// import './Admin.css'; // Make sure this CSS file is in the same folder
+import { Link } from 'react-router-dom';
 
 export const Admin = ({ add, handleUpload }) => {
   const [title, setTitle] = useState('');
@@ -77,7 +77,13 @@ export const Admin = ({ add, handleUpload }) => {
         >
           Add
         </button>
+        <br /><br /><br />
+        <button
+        className="product-button"><Link to='/ProductDetailAdmin'>View uploaded products list</Link></button>
       </div>
+
+
+
     </div>
   );
 };

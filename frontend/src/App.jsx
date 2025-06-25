@@ -12,6 +12,7 @@ import { Categories } from "./e-commerce/Categories";
 import { Admin } from "./e-commerce/Admin";
 import Footer from "./e-commerce/Footer";
 import { Detail } from "./e-commerce/Detail";
+import { ProductDetail } from "./e-commerce/ProductDetail";
 
 export const App = () => {
   const [likedItem, setlikedItem] = useState([]);
@@ -80,6 +81,15 @@ export const App = () => {
     alert("get by id");
     console.log(result);
   };
+
+  // DELETE product
+const handleDelete = async(params)=>{
+   const data = await fetch(`http://localhost:5000/delete/${params}`,{
+     method:"DELETE"
+   })
+   const result = await data.json()
+   console.log(result)
+}
 
   // -----------------------------------------------------------
 
@@ -160,6 +170,7 @@ export const App = () => {
               path="/admin"
               element={<Admin handleUpload={handleUpload} />}
             />
+            <Route path="/ProductDetailAdmin" element={<ProductDetail card1={card1}  handleDelete={handleDelete}/>}/>
             <Route
               path="/detail"
               element={<Detail card2={card2} carti={carti} liked={liked} />}
