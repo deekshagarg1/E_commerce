@@ -1,34 +1,3 @@
-// import React from 'react'
-
-// export const ProductDetail = ({card1}) => {
-//   return (
-// <>
-// <div className="productdetail-main">
-
-
-//     <h1>PRODUCT LISTED</h1>
-
-//     <div className="admin-product">
-// {card1.map((item)=><>
-// <h1>{item.tittle}</h1>
-// <h1>{item.price}</h1>
-// <img src={`http://localhost:5000${item.imageUrl}`}  alt="" />
-// </>)}
-
-
-//     </div>
-
-
-
-    
-// </div>
-
-// </>
-//   )
-// }
-
-
-
 import React from 'react';
 
 export const ProductDetail = ({ card1, handleDelete }) => {

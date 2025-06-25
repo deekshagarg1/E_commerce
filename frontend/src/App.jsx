@@ -91,17 +91,7 @@ const handleDelete = async(params)=>{
    console.log(result)
 }
 
-  // -----------------------------------------------------------
 
-  // --------main add function working--------------
-  // function add (tittle, price , delivery , img){
-
-  // if(img){
-  //   const im= URL.createObjectURL(img)
-  //   const card=[...card1, {tittle, price , delivery ,im , qty:0}]
-  // setcard1(card)
-  // localStorage.setItem("cd", JSON.stringify(card))
-  // }}
 
   function carti(item) {
     const ct = [...cartItem, item];
@@ -116,39 +106,11 @@ const handleDelete = async(params)=>{
     alert("added to wishlist");
   }
 
-  // function cartfinal(item){
-  // const cf=[...cartfinal ,item]
-  // setcartfinal(cf)
-  // }
 
   useEffect(() => {
     fetchProducts();
-
-    // const a= JSON.parse(localStorage.getItem("cd"))
-    // if(a){
-    //   setcard1(a)
-    // }
-    //  const b=JSON.parse(localStorage.getItem("ct1"))
-
-    //  if(b){
-    //   setcardItem(b)
-    //  }
   }, []);
 
-  // backend part
-  // const getPoducts= async()=>{
-  //   let result = await fetch("http://localhost:7800/products")
-  //   // let result = await fetch("https://reqres.in/api/products")
-  //   result =await result.json()
-  //   // setSstq(result);
-  //   setss(result);
-  //   console.log(result)
-  // }
-
-  // console.log(` this is ${sstq.page}`)
-  // useEffect(()=>{
-  //   getPoducts()
-  //   },[])
 
   // ---------------------
 
